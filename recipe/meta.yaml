@@ -1,4 +1,4 @@
-{% set version = '1.6.7' %}
+{% set version = "1.7.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/readODS_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/readODS/readODS_{{ version }}.tar.gz
-  sha256: 41f9c05c906673d044ec4f1156a5d82fc34002797d29b14b68879a38b68473db
+  sha256: f6a8ec724df68983c9b176a1b3b3b01239cc4e99aac4bfb42ce1c2b3d40922c2
 
 build:
-  number: 1
-  skip: True  # [win]
+  number: 0
+  skip: true  # [win]
   rpaths:
     - lib/R/lib/
     - lib/
@@ -40,10 +40,9 @@ test:
 about:
   home: https://CRAN.R-project.org/package=readODS
   license: GPL-3
-  summary: Import ODS (OpenDocument Spreadsheet) into R as a data frame. Also support writing
-    data frame into ODS file.
+  summary: Import ODS (OpenDocument Spreadsheet) into R as a data frame. Also support writing data frame into ODS file.
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:

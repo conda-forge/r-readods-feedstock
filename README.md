@@ -5,7 +5,7 @@ Home: https://CRAN.R-project.org/package=readODS
 
 Package license: GPL-3
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Import ODS (OpenDocument Spreadsheet) into R as a data frame. Also support writing data frame into ODS file.
 
