@@ -20,7 +20,7 @@ build:
     - lib/
 
 requirements:
-  host:
+  host: 
     - r-base
     - r-cellranger
     - r-readr
