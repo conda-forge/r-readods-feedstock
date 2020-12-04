@@ -14,13 +14,13 @@ source:
 
 build:
   number: 0
-  skip: true  # [win]
+  merge_build_host: true  # [win]
   rpaths:
     - lib/R/lib/
     - lib/
 
 requirements:
-  host:
+  host: 
     - r-base
     - r-cellranger
     - r-readr
@@ -35,7 +35,8 @@ requirements:
 
 test:
   commands:
-    - $R -e "library('readODS')"
+    - $R -e "library('readODS')"  # [not win]
+    - "\"%R%\" -e \"library('readODS')\""  # [win]
 
 about:
   home: https://CRAN.R-project.org/package=readODS
