@@ -1,4 +1,4 @@
-{% set version = "1.7.0" %}
+{% set version = "1.8.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,17 +10,17 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/readODS_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/readODS/readODS_{{ version }}.tar.gz
-  sha256: f6a8ec724df68983c9b176a1b3b3b01239cc4e99aac4bfb42ce1c2b3d40922c2
+  sha256: 11d4fc5c1b8685cae594b5a0d70ea782a93befa134514786254f8f6a77baafc9
 
 build:
-  number: 2
+  number: 0
   merge_build_host: true  # [win]
   rpaths:
     - lib/R/lib/
     - lib/
 
 requirements:
-  host: 
+  host:
     - r-base
     - r-cellranger
     - r-readr
