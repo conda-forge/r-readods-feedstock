@@ -1,11 +1,11 @@
-About r-readods
-===============
+About r-readods-feedstock
+=========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-readods-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/ropensci/readODS
 
 Package license: GPL-3.0-only
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-readods-feedstock/blob/main/LICENSE.txt)
 
 Summary: Import ODS (OpenDocument Spreadsheet) into R as a data frame. Also support writing data frame into ODS file.
 
