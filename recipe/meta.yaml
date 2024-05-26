@@ -1,4 +1,4 @@
-{% set version = "2.2.0" %}
+{% set version = "2.3.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/readODS_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/readODS/readODS_{{ version }}.tar.gz
-  sha256: 362c7805258b3030d5cab10e7a70cff12f45b0bf5d8562ee0399aa2eb75d07b9
+  sha256: 1e120ff8fdb34c7e00f07726b4843cfaeee9c680bfdc2982e83422c24e4c0491
 
 build:
   merge_build_host: true  # [win]
@@ -22,7 +22,9 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}              # [not win]
+    - {{ stdlib("c") }}                # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
+    - {{ stdlib("m2w64_c") }}          # [win]
     - {{ compiler('cxx') }}            # [not win]
     - {{ compiler('m2w64_cxx') }}      # [win]
     - {{ posix }}filesystem        # [win]
