@@ -1,6 +1,5 @@
 {% set version = "2.3.0" %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-readods
@@ -13,9 +12,9 @@ source:
   sha256: 1e120ff8fdb34c7e00f07726b4843cfaeee9c680bfdc2982e83422c24e4c0491
 
 build:
-  merge_build_host: true  # [win]
-  number: 0
-  skip: true  # [win]
+  number: 1
+  # Checking windows to see if it passes. Uncomment the line if it fails.
+  # skip: true  # [win]
   rpaths:
     - lib/R/lib/
     - lib/
@@ -44,7 +43,6 @@ requirements:
     - r-zip
   run:
     - r-base
-    - {{ native }}gcc-libs         # [win]
     - r-cellranger
     - r-minty
     - r-stringi
