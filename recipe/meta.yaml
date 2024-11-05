@@ -1,4 +1,4 @@
-{% set version = "2.3.0" %}
+{% set version = "2.3.1" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/readODS_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/readODS/readODS_{{ version }}.tar.gz
-  sha256: 1e120ff8fdb34c7e00f07726b4843cfaeee9c680bfdc2982e83422c24e4c0491
+  sha256: 95ee571fc22ec3fb5db1de973f9eabdf4f73577972d3fe3283b5012614bbaf22
 
 build:
-  number: 1
+  number: 0
   # Checking windows to see if it passes. Uncomment the line if it fails.
   # skip: true  # [win]
   rpaths:
