@@ -7,20 +7,24 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-readods-feeds
 About r-readods
 ---------------
 
-Home: https://github.com/ropensci/readODS
+Home: https://docs.ropensci.org/readODS/
 
 Package license: GPL-3.0-only
 
 Summary: Import ODS (OpenDocument Spreadsheet) into R as a data frame. Also support writing data frame into ODS file.
+
+Development: https://github.com/ropensci/readODS
 
 About r-readods
 ---------------
 
-Home: https://github.com/ropensci/readODS
+Home: https://docs.ropensci.org/readODS/
 
 Package license: GPL-3.0-only
 
 Summary: Import ODS (OpenDocument Spreadsheet) into R as a data frame. Also support writing data frame into ODS file.
+
+Development: https://github.com/ropensci/readODS
 
 Current build status
 ====================
