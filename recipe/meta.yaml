@@ -1,4 +1,4 @@
-{% set version = "2.3.2" %}
+{% set version = "2.3.4" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,15 +9,17 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/readODS_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/readODS/readODS_{{ version }}.tar.gz
-  sha256: 2e67997806d71cc37401975dbdf1e1f0c04140afe218d03637dd6172b54f3476
+  sha256: 913ca1004c006bcde2d09b0d8be88bfae67ede32f83d0ed970073d5209fc1865
 
 build:
-  number: 1
-  # Checking windows to see if it passes. Uncomment the line if it fails.
-  # skip: true  # [win]
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
+  missing_dso_whitelist:
+    - '*/R.dll'        # [win]
+    - '*/Rblas.dll'    # [win]
+    - '*/Rlapack.dll'  # [win]
 
 requirements:
   build:
@@ -36,18 +38,22 @@ requirements:
   host:
     - r-base
     - r-cellranger
-    - r-minty
+    - r-cpp11 >=0.5.0
+    - r-minty >=0.0.5
     - r-stringi
     - r-tibble
     - r-vctrs >=0.4.2
+    - r-withr
     - r-zip
   run:
     - r-base
     - r-cellranger
-    - r-minty
+    - r-cpp11 >=0.5.0
+    - r-minty >=0.0.5
     - r-stringi
     - r-tibble
     - r-vctrs >=0.4.2
+    - r-withr
     - r-zip
 
 test:
@@ -56,7 +62,8 @@ test:
     - "\"%R%\" -e \"library('readODS')\""  # [win]
 
 about:
-  home: https://github.com/ropensci/readODS
+  home: https://docs.ropensci.org/readODS/
+  dev_url: https://github.com/ropensci/readODS
   license: GPL-3.0-only
   summary: Import ODS (OpenDocument Spreadsheet) into R as a data frame. Also support writing data frame into ODS file.
   license_family: GPL3
