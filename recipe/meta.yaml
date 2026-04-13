@@ -1,4 +1,4 @@
-{% set version = "2.3.4" %}
+{% set version = "2.3.5" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/readODS_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/readODS/readODS_{{ version }}.tar.gz
-  sha256: 913ca1004c006bcde2d09b0d8be88bfae67ede32f83d0ed970073d5209fc1865
+  sha256: dbf3dbade957460e0c5871494bfec10158d82da76973fb8282f75d4c3ad147a4
 
 build:
   number: 0
